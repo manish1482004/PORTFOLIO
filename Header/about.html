@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PORTFOLIO</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+
+</head>
+<body>
+      <header>
+    <div class="logo">
+      <img src="./images/zoro attack.gif" alt="Zoro Action" class="zoro-gif">
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="./index.html">HOME</a></li>
+        <li><a href="./portfolio.html">PORTFOLIO</a></li>
+        <li><a href="./about.html">ABOUT</a></li>
+        <li><a href="./contact.html">CONNECT</a></li>
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider round"></span>
+        </label>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about" class="about">
+    <div class="container">
+      <div class="profile">
+        <div class="img-wrapper">
+          <img src="./images/zoro-images-live1.jpg" alt="Zoro" class="profile-pic">
+        </div>
+      </div>
+
+      <div class="bio">
+        <h2>I’m Zoro</h2>
+        <h3 id="animated-title">Web Developer</h3>
+        <p>I craft immersive web experiences using HTML5, CSS3, JavaScript (ES6+), React, and modern tooling like
+          Webpack and Git. I focus on responsive layouts, performance, accessibility, and clean, maintainable code.</p>
+        <ul class="skills">
+          <li>JavaScript / ES6+</li>
+          <li>React & Redux</li>
+          <li>Responsive CSS (Flexbox, Grid)</li>
+          <li>Accessibility & SEO</li>
+          <li>Version Control (Git)</li>
+          <li>Performance Optimization</li>
+        </ul>
+      </div>
+
+
+    </div>
+  </section>
+
+    <script src="./script.js">
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    window.onload = () => {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      body.classList.add(`${savedTheme}-theme`);
+      toggle.checked = savedTheme === 'dark';
+    };
+
+    toggle.addEventListener('change', () => {
+      if (toggle.checked) {
+        body.classList.replace('light-theme', 'dark-theme');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-theme', 'light-theme');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html>
+

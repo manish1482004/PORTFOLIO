@@ -1,0 +1,95 @@
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left,
+  .hero-right {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-right h2 {
+    font-size: 2rem;
+  }
+
+  .hero-right h3 {
+    font-size: 1.5rem;
+  }
+
+  .hero-right p {
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .box {
+    font-size: 1rem;
+    padding: 30px;
+  }
+}
+
+
+/* Responsive behavior about  */
+@media (max-width:600px) {
+  .about .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bio {
+    padding-top: 1rem;
+  }
+}
+
+/*  MY PROJECTS  */
+
+@media (max-width: 600px) {
+  .card img {
+    height: 140px;
+  }
+}
+
+
+/* MY PROJECT 2 */
+
+@media (max-width: 400px) {
+  .carousel-item {
+    width: 80%;
+    left: 10%;
+  }
+
+  .carousel-item:nth-child(1) {
+    transform: rotateY(0deg) translateZ(200px);
+  }
+
+  /* Adjust translateZ for all items accordingly */
+}
+
+
+
+/* RESPONSIVE OF CARD  */
+@media (max-width: 1024px) {
+  .card {
+    width: 48%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
+}
